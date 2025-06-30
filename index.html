@@ -1,0 +1,1697 @@
+<html lang="es"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kochepo Construcciones Spa - Especialistas en Redes Técnicas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'kochepo-red': '#c8102e',
+                        'kochepo-black': '#1a1a1a',
+                        'kochepo-gray': '#6b7280',
+                        'kochepo-light-gray': '#f3f4f6',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .diagonal-bg {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .diagonal-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(200, 16, 46, 0.1) 0%, rgba(200, 16, 46, 0) 70%);
+            z-index: -1;
+        }
+        
+        .diamond {
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #c8102e;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+    </style>
+<style>
+/* Prevenir desbordamiento horizontal */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Inter, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.left-0{left:0px}.right-4{right:1rem}.top-0{top:0px}.top-4{top:1rem}.z-0{z-index:0}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-2{margin-left:0.5rem}.mr-1{margin-right:0.25rem}.mr-2{margin-right:0.5rem}.mr-4{margin-right:1rem}.mt-1{margin-top:0.25rem}.mt-10{margin-top:2.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-16{height:4rem}.h-4{height:1rem}.h-48{height:12rem}.h-6{height:1.5rem}.h-64{height:16rem}.h-8{height:2rem}.h-96{height:24rem}.h-full{height:100%}.max-h-\[90vh\]{max-height:90vh}.w-10{width:2.5rem}.w-12{width:3rem}.w-16{width:4rem}.w-4{width:1rem}.w-6{width:1.5rem}.w-64{width:16rem}.w-8{width:2rem}.w-full{width:100%}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-none{max-width:none}.flex-shrink-0{flex-shrink:0}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-12{gap:3rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-t-4{border-top-width:4px}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-kochepo-red{--tw-border-opacity:1;border-color:rgb(200 16 46 / var(--tw-border-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-kochepo-black{--tw-bg-opacity:1;background-color:rgb(26 26 26 / var(--tw-bg-opacity, 1))}.bg-kochepo-light-gray{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-kochepo-red{--tw-bg-opacity:1;background-color:rgb(200 16 46 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-opacity-50{--tw-bg-opacity:0.5}.p-1{padding:0.25rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pt-16{padding-top:4rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-kochepo-black{--tw-text-opacity:1;color:rgb(26 26 26 / var(--tw-text-opacity, 1))}.text-kochepo-gray{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-kochepo-red{--tw-text-opacity:1;color:rgb(200 16 46 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-300:hover{--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity, 1))}.hover\:bg-kochepo-light-gray:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:bg-kochepo-red:hover{--tw-bg-opacity:1;background-color:rgb(200 16 46 / var(--tw-bg-opacity, 1))}.hover\:bg-red-700:hover{--tw-bg-opacity:1;background-color:rgb(185 28 28 / var(--tw-bg-opacity, 1))}.hover\:text-kochepo-black:hover{--tw-text-opacity:1;color:rgb(26 26 26 / var(--tw-text-opacity, 1))}.hover\:text-kochepo-red:hover{--tw-text-opacity:1;color:rgb(200 16 46 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-kochepo-red:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(200 16 46 / var(--tw-ring-opacity, 1))}@media (min-width: 768px){.md\:flex{display:flex}.md\:hidden{display:none}.md\:w-1\/2{width:50%}.md\:w-auto{width:auto}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:py-32{padding-top:8rem;padding-bottom:8rem}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width: 1024px){.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}}</style><link rel="stylesheet" href="chrome-extension://bojobppfploabceghnmlahpoonbcbacn/app/content-style.css"></head>
+<body class="bg-white text-kochepo-black">
+    <!-- Header -->
+    <header class="bg-[#24272d] shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="mr-2">
+                    <!-- Logo -->
+                    <div class="flex items-center">
+                        <img src="assets/logo-web-kochepo (1).png" alt="Kochepo Logo" class="h-12">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="nav-link active font-medium text-white hover:text-kochepo-red transition">Inicio</a>
+                <a href="#" class="nav-link font-medium text-white hover:text-kochepo-red transition" onclick="navigateTo('quienes-somos')">Quiénes Somos</a>
+                <a href="#" class="nav-link font-medium text-white hover:text-kochepo-red transition" onclick="navigateTo('servicios')">Servicios</a>
+                <a href="#" class="nav-link font-medium text-white hover:text-kochepo-red transition" onclick="navigateTo('contacto')">Contacto</a>
+            </nav>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-kochepo-black focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="mobile-menu fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 md:hidden">
+            <div class="p-4 border-b">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center">
+                        <div class="bg-kochepo-red h-8 w-8 diamond flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">K</span>
+                        </div>
+                        <span class="ml-2 text-lg font-bold text-kochepo-black">KOCHEPO</span>
+                    </div>
+                    <button id="close-menu" class="text-kochepo-black focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <nav class="p-4">
+                <ul class="space-y-4">
+                    <li><a href="#" class="block py-2 px-4 text-kochepo-black hover:bg-kochepo-light-gray rounded transition" onclick="navigateTo('inicio')">Inicio</a></li>
+                    <li><a href="#" class="block py-2 px-4 text-kochepo-black hover:bg-kochepo-light-gray rounded transition" onclick="navigateTo('quienes-somos')">Quiénes Somos</a></li>
+                    <li><a href="#" class="block py-2 px-4 text-kochepo-black hover:bg-kochepo-light-gray rounded transition" onclick="navigateTo('servicios')">Servicios</a></li>
+                    <li><a href="#" class="block py-2 px-4 text-kochepo-black hover:bg-kochepo-light-gray rounded transition" onclick="navigateTo('contacto')">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="pt-16">
+        <!-- Home Page -->
+        <div id="inicio" class="page active">
+            <!-- Hero Section -->
+            <section class="relative bg-kochepo-black text-white">
+                <div class="absolute inset-0 z-0 overflow-hidden">
+                    <div class="absolute inset-0 bg-kochepo-black bg-opacity-60"></div>
+                    <img src="assets/diseño.jpg" 
+                         alt="Fondo corporativo Kochepo" 
+                         class="w-full h-full object-cover object-center">
+                </div>
+                <div class="container mx-auto px-4 py-20 md:py-32 relative z-10">
+                    <div class="max-w-3xl">
+                        <h1 class="text-4xl md:text-5xl font-bold mb-4">Conectando seguridad y bienestar, tubería a tubería</h1>
+                        <h2 class="text-2xl md:text-3xl font-semibold text-kochepo-red mb-6">RESPONSABILIDAD · PROFESIONALISMO · PULCRITUD</h2>
+                        <p class="text-lg md:text-xl mb-8">En KOCHEPO, brindamos instalaciones sanitarias de alta calidad con un servicio eficiente y personalizado. Nos comprometemos con la satisfacción del cliente y la sostenibilidad ambiental. Contáctenos hoy para soluciones adaptadas a sus necesidades.</p>
+                        <div class="flex flex-wrap gap-6">
+                            <a href="#" class="bg-kochepo-red hover:bg-red-700 text-white font-medium py-3 px-8 rounded-md transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform" onclick="navigateTo('contacto')">
+                                Agendar visita técnica
+                            </a>
+                            <a href="#" class="bg-white hover:bg-gray-50 text-kochepo-black font-medium py-3 px-8 rounded-md transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform border border-gray-200" onclick="navigateTo('servicios')">
+                                Explorar servicios
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Carousel Section -->
+            <section class="py-16 bg-white w-full overflow-hidden">
+                <div class="container mx-auto px-4">
+                    <div class="relative max-w-5xl mx-auto">
+                        <!-- Carousel Navigation -->
+                        <div class="flex justify-center mb-8 space-x-2">
+                            <button onclick="showSlide(0)" class="carousel-btn w-3 h-3 rounded-full bg-kochepo-red opacity-100 focus:outline-none" aria-label="Mostrar Quiénes Somos"></button>
+                            <button onclick="showSlide(1)" class="carousel-btn w-3 h-3 rounded-full bg-gray-300 opacity-50 focus:outline-none" aria-label="Mostrar Misión"></button>
+                            <button onclick="showSlide(2)" class="carousel-btn w-3 h-3 rounded-full bg-gray-300 opacity-50 focus:outline-none" aria-label="Mostrar Visión"></button>
+                        </div>
+                        
+                        <!-- Carousel Slides -->
+                        <div class="relative overflow-hidden w-full">
+                            <div class="carousel-slides flex transition-transform duration-300 ease-in-out w-full">
+                                <!-- Slide 1: Quiénes Somos -->
+                                <div class="carousel-slide w-full flex-shrink-0 px-4 transition-all duration-300">
+                                    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-kochepo-red">
+                                        <h3 class="text-2xl font-bold text-kochepo-black mb-4">¿Quiénes Somos?</h3>
+                                        <div class="h-1 w-16 bg-kochepo-red mb-6"></div>
+                                        <p class="text-kochepo-gray leading-relaxed">
+                                            En Kochepo Constructora Spa somos una empresa joven con 3 años en el mercado, especializada en instalaciones sanitarias, eléctricas y redes técnicas, con presencia en la Región Metropolitana.
+                                            Integramos tecnología y metodologías modernas para ofrecer soluciones eficientes, seguras y de alta calidad. Participamos en todas las etapas de Tu negocio y proyecto con una atención cercana, 
+                                            compromiso total y muchas ganas de seguir creciendo junto a nuestros clientes.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Slide 2: Misión -->
+                                <div class="carousel-slide w-full flex-shrink-0 px-4 transition-all duration-300">
+                                    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-kochepo-red">
+                                        <h3 class="text-2xl font-bold text-kochepo-black mb-4">Misión</h3>
+                                        <div class="h-1 w-16 bg-kochepo-red mb-6"></div>
+                                        <p class="text-kochepo-gray leading-relaxed">
+                                            En Kochepo Constructora Spa trabajamos para entregar soluciones integrales combinando calidad, 
+                                            innovación y compromiso. Nuestra misión es resolver con eficiencia y seguridad las necesidades de 
+                                            nuestros clientes, fortaleciendo relaciones de confianza a través de un servicio personalizado y 
+                                            cumplimiento técnico riguroso. Nos impulsa el desafío de crecer cada día, aportando valor a cada 
+                                            proyecto que desarrollamos.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Slide 3: Visión -->
+                                <div class="carousel-slide w-full flex-shrink-0 px-4 transition-all duration-300">
+                                    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-kochepo-red">
+                                        <h3 class="text-2xl font-bold text-kochepo-black mb-4">Visión</h3>
+                                        <div class="h-1 w-16 bg-kochepo-red mb-6"></div>
+                                        <p class="text-kochepo-gray leading-relaxed">
+                                            Ser una empresa referente en el rubro de la construcción y mantenimiento, reconocida por su
+                                            profesionalismo, responsabilidad y capacidad de innovación, consolidándonos como un aliado 
+                                            estratégico para nuestros clientes en proyectos de pequeña y gran escala a lo largo del país.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Navigation Arrows -->
+                        <button onclick="prevSlide()" class="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none z-10">
+                            <svg class="w-6 h-6 text-kochepo-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                        </button>
+                        <button onclick="nextSlide()" class="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none z-10">
+                            <svg class="w-6 h-6 text-kochepo-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <script>
+                    // Inicialización
+                    document.addEventListener('DOMContentLoaded', function() {
+                        initCarousel();
+                        window.addEventListener('resize', debounce(updateSlidesWidth, 250));
+                    });
+                    
+                    // Variables globales
+                    let currentSlide = 0;
+                    let slideInterval;
+                    let isTransitioning = false;
+                    const slides = document.querySelectorAll('.carousel-slide');
+                    const dots = document.querySelectorAll('.carousel-btn');
+                    const slidesContainer = document.querySelector('.carousel-slides');
+                    
+                    // Función debounce para mejorar rendimiento en redimensionamiento
+                    function debounce(func, wait) {
+                        let timeout;
+                        return function() {
+                            const context = this, args = arguments;
+                            clearTimeout(timeout);
+                            timeout = setTimeout(() => func.apply(context, args), wait);
+                        };
+                    }
+                    
+                    function initCarousel() {
+                        // Configuración inicial
+                        updateSlidesWidth();
+                        showSlide(currentSlide);
+                        startAutoPlay();
+                        
+                        // Manejar el final de la transición
+                        slidesContainer.addEventListener('transitionend', () => {
+                            isTransitioning = false;
+                        });
+                    }
+                    
+                    function updateSlidesWidth() {
+                        if (!slidesContainer) return;
+                        
+                        const container = slidesContainer.parentElement;
+                        const containerWidth = container.offsetWidth;
+                        
+                        // Asegurar que los slides tengan el ancho correcto
+                        slides.forEach(slide => {
+                            slide.style.width = `${containerWidth}px`;
+                            slide.style.flexShrink = '0';
+                        });
+                        
+                        // Ajustar el ancho del contenedor de slides
+                        slidesContainer.style.width = `${containerWidth * slides.length}px`;
+                        
+                        // Volver a mostrar el slide actual con el nuevo tamaño
+                        showSlide(currentSlide);
+                    }
+                    
+                    function showSlide(index) {
+                        if (isTransitioning) return;
+                        
+                        // Asegurarse de que el índice esté dentro de los límites
+                        currentSlide = (index + slides.length) % slides.length;
+                        
+                        // Mover el contenedor de slides
+                        const slideWidth = slides[0]?.offsetWidth || 0;
+                        slidesContainer.style.transition = 'transform 0.5s ease-in-out';
+                        slidesContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+                        
+                        // Actualizar indicadores
+                        updateDots();
+                        
+                        isTransitioning = true;
+                    }
+                    
+                    function updateDots() {
+                        dots.forEach((dot, i) => {
+                            const isActive = i === currentSlide % dots.length;
+                            dot.classList.toggle('bg-kochepo-red', isActive);
+                            dot.classList.toggle('bg-gray-300', !isActive);
+                            dot.classList.toggle('opacity-100', isActive);
+                            dot.classList.toggle('opacity-50', !isActive);
+                        });
+                    }
+                    
+                    function nextSlide() {
+                        if (isTransitioning) return;
+                        showSlide(currentSlide + 1);
+                    }
+                    
+                    function prevSlide() {
+                        if (isTransitioning) return;
+                        showSlide(currentSlide - 1);
+                    }
+                    
+                    function startAutoPlay() {
+                        if (slideInterval) clearInterval(slideInterval);
+                        slideInterval = setInterval(() => {
+                            if (!isTransitioning) {
+                                nextSlide();
+                            }
+                        }, 5000);
+                    }
+                    
+                    // Iniciar autoplay
+                    startAutoPlay();
+                    
+                    // Pausar autoplay al interactuar
+                    const controls = document.querySelectorAll('.carousel-btn, [onclick^="prev"], [onclick^="next"]');
+                    controls.forEach(control => {
+                        control.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            clearInterval(slideInterval);
+                            setTimeout(startAutoPlay, 10000);
+                        });
+                    });
+                    
+                    // Servicios Carousel - Versión Mejorada
+                    // La inicialización se hará al final del body
+                    function initServiceCarousel() {
+                        // Variables del carrusel (usando let para permitir reasignación)
+                        let serviceCarousel = document.querySelector('.service-carousel-slides');
+                        let serviceSlides = document.querySelectorAll('.service-carousel-slide');
+                        let serviceDots = document.querySelectorAll('.service-carousel-btn');
+                        
+                        if (!serviceCarousel || serviceSlides.length === 0) {
+                            console.error('Elementos del carrusel no encontrados');
+                            return;
+                        }
+                        
+                        let currentServiceIndex = 0;
+                        let serviceIntervalId;
+                        
+                        // Configurar el carrusel
+                        function setupCarousel() {
+                            // Asegurarse de que el contenedor del carrusel ocupe el ancho completo
+                            serviceCarousel.style.width = '100%';
+                            serviceCarousel.style.overflow = 'visible';
+                            serviceCarousel.style.display = 'flex';
+                            
+                            // Configurar cada slide
+                            serviceSlides.forEach((slide) => {
+                                slide.style.minWidth = '100%';
+                                slide.style.width = '100%';
+                                slide.style.flexShrink = '0';
+                                slide.style.transition = 'transform 0.5s ease';
+                            });
+                            
+                            // Asegurarse de que el contenedor padre tenga la posición relativa
+                            const parent = serviceCarousel.parentElement;
+                            if (parent) {
+                                parent.style.position = 'relative';
+                                parent.style.overflow = 'hidden';
+                            }
+                            
+                            updateCarousel();
+                        }
+                        
+                        // Actualizar la posición del carrusel
+                        function updateCarousel() {
+                            // Mover el carrusel al slide actual
+                            const translateX = -currentServiceIndex * 100;
+                            serviceCarousel.style.transform = `translateX(${translateX}%)`;
+                            
+                            // Actualizar indicadores de navegación
+                            updateDots();
+                            
+                            console.log('Current slide:', currentServiceIndex, 'Transform:', `translateX(${translateX}%)`);
+                        }
+                        
+                        // Actualizar los puntos de navegación
+                        function updateDots() {
+                            // Obtener los puntos actuales del DOM
+                            const dots = document.querySelectorAll('.service-carousel-btn');
+                            
+                            // Verificar si hay puntos para actualizar
+                            if (!dots || dots.length === 0) {
+                                console.log('No se encontraron puntos de navegación para actualizar');
+                                return;
+                            }
+                            
+                            // Actualizar cada punto
+                            dots.forEach((dot, index) => {
+                                const isActive = index === currentServiceIndex;
+                                
+                                // Eliminar todas las clases primero para evitar conflictos
+                                dot.classList.remove('bg-kochepo-red', 'bg-gray-300', 'opacity-100', 'opacity-50');
+                                
+                                // Aplicar las clases correctas
+                                if (isActive) {
+                                    dot.classList.add('bg-kochepo-red', 'opacity-100');
+                                } else {
+                                    dot.classList.add('bg-gray-300', 'opacity-50');
+                                }
+                                
+                                console.log(`Punto ${index}:`, dot.className, 'Activo:', isActive);
+                            });
+                            
+                            console.log('Puntos actualizados. Slide actual:', currentServiceIndex);
+                        }
+                        
+                        // Navegación
+                        function goToSlide(index) {
+                            // Asegurarse de que el índice esté dentro de los límites
+                            if (index < 0) {
+                                index = 0;
+                            } else if (index >= serviceSlides.length) {
+                                index = serviceSlides.length - 1;
+                            }
+                            
+                            currentServiceIndex = index;
+                            console.log('Going to slide:', index, 'of', serviceSlides.length - 1);
+                            updateCarousel();
+                        }
+                        
+                        // Función para navegar a un slide específico
+                        function goToServiceSlide(index) {
+                            // Asegurarse de que el índice esté dentro de los límites
+                            if (index < 0) {
+                                index = 0;
+                            } else if (index >= serviceSlides.length) {
+                                index = serviceSlides.length - 1;
+                            }
+                            
+                            // Actualizar el índice actual
+                            currentServiceIndex = index;
+                            console.log('Navegando al slide:', index, 'de', serviceSlides.length - 1);
+                            
+                            // Actualizar la posición del carrusel
+                            const translateX = -currentServiceIndex * 100;
+                            serviceCarousel.style.transform = `translateX(${translateX}%)`;
+                            
+                            // Actualizar los puntos de navegación
+                            updateDots();
+                            
+                            // Reiniciar el intervalo de autoplay
+                            resetInterval();
+                        }
+                        
+                        // Funciones globales para la navegación
+                        window.prevServiceSlide = function() {
+                            // Retroceder de a un slide a la vez
+                            const newIndex = Math.max(0, currentServiceIndex - 1);
+                            goToServiceSlide(newIndex);
+                        };
+                        
+                        window.nextServiceSlide = function() {
+                            // Avanzar de a un slide a la vez
+                            const newIndex = Math.min(serviceSlides.length - 1, currentServiceIndex + 1);
+                            goToServiceSlide(newIndex);
+                        };
+                        
+                        window.showServiceSlide = function(index) {
+                            // Ir directamente a un slide específico
+                            const slideIndex = parseInt(index);
+                            if (!isNaN(slideIndex) && slideIndex >= 0 && slideIndex < serviceSlides.length) {
+                                goToServiceSlide(slideIndex);
+                            }
+                        };
+                        
+                        // Función de utilidad para mantener la compatibilidad
+                        function resetInterval() {
+                            // No hacer nada, solo para mantener compatibilidad con llamadas existentes
+                        }
+                        
+                        // Función para crear los puntos de navegación
+                        function createNavigationDots() {
+                            const dotsContainer = document.getElementById('service-carousel-dots');
+                            if (!dotsContainer) return;
+                            
+                            // Limpiar puntos existentes
+                            dotsContainer.innerHTML = '';
+                            
+                            // Crear un punto por cada slide
+                            for (let i = 0; i < serviceSlides.length; i++) {
+                                const dot = document.createElement('button');
+                                dot.className = `service-carousel-btn w-3 h-3 rounded-full ${i === 0 ? 'bg-kochepo-red' : 'bg-gray-300'} ${i === 0 ? 'opacity-100' : 'opacity-50'} focus:outline-none`;
+                                dot.setAttribute('aria-label', `Ir al servicio ${i + 1}`);
+                                
+                                // Usar un manejador de eventos directo en lugar de onclick
+                                dot.addEventListener('click', (e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    console.log('Clic en punto:', i);
+                                    showServiceSlide(i);
+                                    return false;
+                                });
+                                
+                                dotsContainer.appendChild(dot);
+                                console.log('Punto creado para slide', i);
+                            }
+                            
+                            // Actualizar la referencia a los puntos (usando let en la declaración original)
+                            serviceDots = document.querySelectorAll('.service-carousel-btn');
+                        }
+                        
+                        // Inicializar
+                        setupCarousel();
+                        createNavigationDots();
+                        
+                        // Event Listeners (sin autoplay)
+                        
+                        // Forzar un redibujado para asegurar que todo se muestre correctamente
+                        setTimeout(() => {
+                            serviceCarousel.style.transition = 'transform 0.5s ease';
+                        }, 50);
+                        
+                        // Asegurar que el carrusel se actualice después de la carga completa
+                        window.addEventListener('load', function() {
+                            setTimeout(() => {
+                                updateCarousel();
+                                createNavigationDots(); // Asegurar que los puntos se creen después de cargar todo
+                            }, 100);
+                        });
+                        
+                        // Manejar redimensionamiento
+                        let resizeTimer;
+                        window.addEventListener('resize', () => {
+                            clearTimeout(resizeTimer);
+                            resizeTimer = setTimeout(() => {
+                                setupCarousel();
+                            }, 250);
+                        });
+                        
+                        // Forzar actualización después de la carga de imágenes
+                        window.addEventListener('load', setupCarousel);
+                    }
+                </script>
+            </section>
+
+            <!-- Values Section -->
+            <section class="py-16 bg-white diagonal-bg">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold mb-12 text-center">Nuestros Valores</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-kochepo-red">
+                            <div class="bg-kochepo-red h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-tools text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-center">Experiencia Técnica</h3>
+                            <p class="text-kochepo-gray text-center">Contamos con profesionales altamente capacitados para resolver cualquier desafío técnico.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-kochepo-red">
+                            <div class="bg-kochepo-red h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-medal text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-center">Profesionalismo</h3>
+                            <p class="text-kochepo-gray text-center">Trabajamos con los más altos estándares de calidad y compromiso en cada proyecto.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-kochepo-red">
+                            <div class="bg-kochepo-red h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-clipboard-check text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-center">Cumplimiento Normativo</h3>
+                            <p class="text-kochepo-gray text-center">Garantizamos que todas nuestras instalaciones cumplen con las normativas vigentes.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-kochepo-red">
+                            <div class="bg-kochepo-red h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-comments text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-center">Comunicación Clara</h3>
+                            <p class="text-kochepo-gray text-center">Mantenemos a nuestros clientes informados durante todo el proceso del proyecto.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Carousel -->
+            <section class="py-16 bg-kochepo-light-gray">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold mb-4 text-center">Nuestros Servicios</h2>
+                    <p class="text-kochepo-gray text-center mb-12 max-w-3xl mx-auto">Ofrecemos soluciones integrales para todas sus necesidades de instalación y mantenimiento de redes técnicas.</p>
+                    
+                    <div class="relative max-w-6xl mx-auto">
+                        <!-- Carousel Navigation -->
+                        <div id="service-carousel-dots" class="flex justify-center mb-8 space-x-2">
+                            <!-- Los puntos se generarán dinámicamente con JavaScript -->
+                        </div>
+                        
+                        <!-- Carousel Container -->
+                        <div class="relative w-full overflow-hidden" style="min-height: 500px;">
+                            <div class="service-carousel-slides flex w-full transition-transform duration-300 ease-in-out" style="width: 100%;">
+                                <!-- Slide 1 -->
+                                <div class="service-carousel-slide w-full flex-shrink-0 px-4" style="width: 100%;">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                        <!-- Service 1 -->
+                                        <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                                            <div class="h-48 bg-kochepo-black overflow-hidden">
+                                                <img src="assets/matricesdeaguapotable.png" alt="Matrices de Agua Potable" class="w-full h-full object-cover">
+                                            </div>
+                                            <div class="p-6">
+                                                <h3 class="text-xl font-semibold mb-2">Matrices de Agua Potable</h3>
+                                                <p class="text-kochepo-gray mb-4">Diseño e instalación profesional de sistemas de distribución de agua potable.</p>
+                                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="navigateTo('servicios')">Ver más →</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Service 2 -->
+                                        <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                                            <div class="h-48 bg-kochepo-black overflow-hidden">
+                                                <img src="assets/serviciodevideoinspeccionderedes.png" alt="Videoinspección de Redes" class="w-full h-full object-cover">
+                                            </div>
+                                            <div class="p-6">
+                                                <h3 class="text-xl font-semibold mb-2">Videoinspección de Redes</h3>
+                                                <p class="text-kochepo-gray mb-4">Diagnóstico preciso de tuberías y alcantarillados mediante tecnología de video.</p>
+                                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="navigateTo('servicios')">Ver más →</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Service 3 -->
+                                        <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                                            <div class="h-48 bg-kochepo-black overflow-hidden">
+                                                <img src="assets/serviciodedestapesdealcantirllados.png" alt="Destapes de Alcantarillados" class="w-full h-full object-cover">
+                                            </div>
+                                            <div class="p-6">
+                                                <h3 class="text-xl font-semibold mb-2">Destapes de Alcantarillados</h3>
+                                                <p class="text-kochepo-gray mb-4">Servicio rápido y eficiente para el despeje de tuberías y alcantarillados.</p>
+                                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="navigateTo('servicios')">Ver más →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Slide 2 -->
+                                <div class="service-carousel-slide w-full flex-shrink-0 px-4" style="width: 100%;">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                        <!-- Service 4 -->
+                                        <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                                            <div class="h-48 bg-kochepo-black overflow-hidden">
+                                                <img src="assets/tableroselectricos.png" alt="Tableros Eléctricos" class="w-full h-full object-cover">
+                                            </div>
+                                            <div class="p-6">
+                                                <h3 class="text-xl font-semibold mb-2">Tableros Eléctricos</h3>
+                                                <p class="text-kochepo-gray mb-4">Diseño e instalación de tableros eléctricos de alta calidad y seguridad.</p>
+                                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="navigateTo('servicios')">Ver más →</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Service 5 -->
+                                        <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                                            <div class="h-48 bg-kochepo-black overflow-hidden">
+                                                <img src="assets/estructurasdeaceroyhormigon.png" alt="Estructuras de Acero y Hormigón" class="w-full h-full object-cover">
+                                            </div>
+                                            <div class="p-6">
+                                                <h3 class="text-xl font-semibold mb-2">Estructuras de Acero y Hormigón</h3>
+                                                <p class="text-kochepo-gray mb-4">Construcción de estructuras resistentes y duraderas para todo tipo de proyectos.</p>
+                                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="navigateTo('servicios')">Ver más →</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Service 6 -->
+                                        <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                                            <div class="h-48 bg-kochepo-black flex items-center justify-center">
+                                                <i class="fas fa-tools text-white text-5xl"></i>
+                                            </div>
+                                            <div class="p-6">
+                                                <h3 class="text-xl font-semibold mb-2">Instalaciones Sanitarias y Eléctricas</h3>
+                                                <p class="text-kochepo-gray mb-4">Soluciones completas para instalaciones sanitarias y sistemas eléctricos.</p>
+                                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="navigateTo('servicios')">Ver más →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Slide 3 -->
+                                <div class="service-carousel-slide w-full flex-shrink-0 px-4" style="width: 100%;">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                        <!-- Service 7 -->
+                                        <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                                            <div class="h-48 bg-kochepo-black overflow-hidden">
+                                                <img src="assets/redesdeincendioyredhumeda.png" alt="Redes de Incendio y Red Húmeda" class="w-full h-full object-cover">
+                                            </div>
+                                            <div class="p-6">
+                                                <h3 class="text-xl font-semibold mb-2">Redes de Incendio y Red Húmeda</h3>
+                                                <p class="text-kochepo-gray mb-4">Sistemas de protección contra incendios para su seguridad.</p>
+                                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="navigateTo('servicios')">Ver más →</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Service 8 -->
+                                        <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                                            <div class="h-48 bg-kochepo-black flex items-center justify-center">
+                                                <i class="fas fa-fire text-white text-5xl"></i>
+                                            </div>
+                                            <div class="p-6">
+                                                <h3 class="text-xl font-semibold mb-2">Redes de Gas</h3>
+                                                <p class="text-kochepo-gray mb-4">Instalación y mantenimiento de redes de gas seguras y eficientes.</p>
+                                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="navigateTo('servicios')">Ver más →</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Service 9 -->
+                                        <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                                            <div class="h-48 bg-kochepo-black overflow-hidden">
+                                                <img src="assets/drenesysistemasdecaptacionaguaslluvias.png" alt="Drenes y Sistemas de Captación de Aguas Lluvias" class="w-full h-full object-cover">
+                                            </div>
+                                            <div class="p-6">
+                                                <h3 class="text-xl font-semibold mb-2">Drenes y Sistemas de Captación de Aguas Lluvias</h3>
+                                                <p class="text-kochepo-gray mb-4">Soluciones efectivas para el manejo de aguas lluvias.</p>
+                                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="navigateTo('servicios')">Ver más →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Slide 4 -->
+                                <div class="service-carousel-slide w-full flex-shrink-0 px-4" style="width: 100%;">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                        <!-- Service 10 -->
+                                        <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                                            <div class="h-48 bg-kochepo-black overflow-hidden">
+                                                <img src="assets/deteccionyreparaciondefiltraciones.png" alt="Detección y Reparación de Filtraciones" class="w-full h-full object-cover">
+                                            </div>
+                                            <div class="p-6">
+                                                <h3 class="text-xl font-semibold mb-2">Detección y Reparación de Filtraciones</h3>
+                                                <p class="text-kochepo-gray mb-4">Localización y solución profesional de filtraciones de agua.</p>
+                                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="navigateTo('servicios')">Ver más →</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Service 11 -->
+                                        <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                                            <div class="h-48 bg-kochepo-black overflow-hidden">
+                                                <img src="assets/confecciondecamarasdeinspeccion.png" alt="Cámaras de Inspección" class="w-full h-full object-cover">
+                                            </div>
+                                            <div class="p-6">
+                                                <h3 class="text-xl font-semibold mb-2">Cámaras de Inspección</h3>
+                                                <p class="text-kochepo-gray mb-4">Instalación de cámaras de inspección para mantenimiento preventivo.</p>
+                                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="navigateTo('servicios')">Ver más →</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Service 12 -->
+                                        <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                                            <div class="h-48 bg-kochepo-black overflow-hidden">
+                                                <img src="assets/bateriadistribucionmedidores.png" alt="Batería Distribución Medidores" class="w-full h-full object-cover">
+                                            </div>
+                                            <div class="p-6">
+                                                <h3 class="text-xl font-semibold mb-2">Batería Distribución Medidores</h3>
+                                                <p class="text-kochepo-gray mb-4">Sistemas de medición y control para servicios básicos.</p>
+                                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="navigateTo('servicios')">Ver más →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Slide 5 -->
+                                <div class="service-carousel-slide w-full flex-shrink-0 px-4" style="width: 100%;">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                        <!-- Service 13 -->
+                                        <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                                            <div class="h-48 bg-kochepo-black flex items-center justify-center">
+                                                <i class="fas fa-fire text-white text-5xl"></i>
+                                            </div>
+                                            <div class="p-6">
+                                                <h3 class="text-xl font-semibold mb-2">Instalación de Artefactos a Gas</h3>
+                                                <p class="text-kochepo-gray mb-4">Instalación segura de cocinas, calefones y otros artefactos a gas.</p>
+                                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="navigateTo('servicios')">Ver más →</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Service 14 -->
+                                        <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                                            <div class="h-48 bg-kochepo-black overflow-hidden">
+                                                <img src="assets/revestimientosceramicos.png" alt="Revestimientos Cerámicos" class="w-full h-full object-cover">
+                                            </div>
+                                            <div class="p-6">
+                                                <h3 class="text-xl font-semibold mb-2">Revestimientos Cerámicos</h3>
+                                                <p class="text-kochepo-gray mb-4">Instalación profesional de cerámicas para pisos y muros.</p>
+                                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="navigateTo('servicios')">Ver más →</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Service 15 -->
+                                        <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                                            <div class="h-48 bg-kochepo-black flex items-center justify-center">
+                                                <i class="fas fa-tools text-white text-5xl"></i>
+                                            </div>
+                                            <div class="p-6">
+                                                <h3 class="text-xl font-semibold mb-2">Instalación de Todo Tipo de Artefactos</h3>
+                                                <p class="text-kochepo-gray mb-4">Servicio completo de instalación para todo tipo de electrodomésticos.</p>
+                                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="navigateTo('servicios')">Ver más →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Slide 6 -->
+                                <div class="service-carousel-slide w-full flex-shrink-0 px-4" style="width: 100%;">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                        <!-- Service 16 -->
+                                        <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                                            <div class="h-48 bg-kochepo-black overflow-hidden">
+                                                <img src="assets/pisospinturasyrevestimientos.png" alt="Pisos, Pinturas y Revestimientos" class="w-full h-full object-cover">
+                                            </div>
+                                            <div class="p-6">
+                                                <h3 class="text-xl font-semibold mb-2">Pisos, Pinturas y Revestimientos</h3>
+                                                <p class="text-kochepo-gray mb-4">Terminaciones de primera calidad para sus espacios.</p>
+                                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="navigateTo('servicios')">Ver más →</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Service 17 -->
+                                        <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                                            <div class="h-48 bg-kochepo-black flex items-center justify-center">
+                                                <i class="fas fa-shower text-white text-5xl"></i>
+                                            </div>
+                                            <div class="p-6">
+                                                <h3 class="text-xl font-semibold mb-2">Camarines</h3>
+                                                <p class="text-kochepo-gray mb-4">Diseño y construcción de camarines funcionales y modernos.</p>
+                                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="navigateTo('servicios')">Ver más →</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Service 18 -->
+                                        <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                                            <div class="h-48 bg-kochepo-black flex items-center justify-center">
+                                                <i class="fas fa-toilet text-white text-5xl"></i>
+                                            </div>
+                                            <div class="p-6">
+                                                <h3 class="text-xl font-semibold mb-2">Salas de Baño</h3>
+                                                <p class="text-kochepo-gray mb-4">Diseño e instalación completa de baños modernos y funcionales.</p>
+                                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="navigateTo('servicios')">Ver más →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Navigation Arrows -->
+                        <button onclick="prevServiceSlide()" class="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none z-30 transition-all duration-200 hover:scale-110">
+                            <svg class="w-6 h-6 text-kochepo-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                        </button>
+                        
+                        <button onclick="nextServiceSlide()" class="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none z-30 transition-all duration-200 hover:scale-110">
+                            <svg class="w-6 h-6 text-kochepo-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <div class="text-center mt-10">
+                        <a href="#" class="inline-block bg-kochepo-red hover:bg-red-700 text-white font-medium py-3 px-6 rounded-md transition duration-300 shadow-lg" onclick="navigateTo('servicios')">
+                            Ver todos los servicios
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="py-16 bg-kochepo-black text-white">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-4xl mx-auto text-center">
+                        <h2 class="text-3xl font-bold mb-6">¿Necesita una solución técnica para su proyecto?</h2>
+                        <p class="text-lg mb-8">Contáctenos hoy mismo para una evaluación profesional y un presupuesto sin compromiso.</p>
+                        <a href="#" class="inline-block bg-kochepo-red hover:bg-red-700 text-white font-medium py-3 px-8 rounded-md transition duration-300 shadow-lg" onclick="navigateTo('contacto')">
+                            Solicitar visita técnica
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Quienes Somos Page -->
+        <div id="quienes-somos" class="page hidden">
+            <!-- Hero Section -->
+            <section class="bg-kochepo-black text-white py-20">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-4xl mx-auto">
+                        <h1 class="text-4xl font-bold mb-6">Quiénes Somos</h1>
+                        <p class="text-lg">Conozca nuestra historia, misión y visión como empresa especializada en soluciones técnicas.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Historia Section -->
+            <section class="py-16 bg-white">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-4xl mx-auto">
+                        <h2 class="text-3xl font-bold mb-8">Nuestra Historia</h2>
+                        <div class="flex flex-col md:flex-row gap-8 items-center">
+                            <div class="md:w-1/2">
+                                <div class="bg-kochepo-light-gray p-1">
+                                    <svg class="w-full" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="600" height="400" fill="#f3f4f6"></rect>
+                                        <path d="M300 100 L500 200 L300 300 L100 200 Z" fill="#c8102e" fill-opacity="0.8"></path>
+                                        <path d="M300 150 L400 200 L300 250 L200 200 Z" fill="#1a1a1a"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2">
+                                <p class="text-kochepo-gray mb-4">Kochepo Construcciones Spa es una empresa joven con 3 años de experiencia en el mercado chileno, fundada por un equipo de profesionales con amplia trayectoria en el sector de la construcción e instalaciones técnicas.</p>
+                                <p class="text-kochepo-gray mb-4">Desde nuestros inicios, nos hemos enfocado en ofrecer soluciones innovadoras y eficientes para proyectos de diversa envergadura, siempre manteniendo los más altos estándares de calidad y seguridad.</p>
+                                <p class="text-kochepo-gray">Nuestra participación abarca todas las etapas del proyecto, desde la planificación inicial hasta la ejecución y posterior mantenimiento, garantizando así un servicio integral y personalizado para cada cliente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Misión y Visión -->
+            <section class="py-16 bg-kochepo-light-gray">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-4xl mx-auto">
+                        <h2 class="text-3xl font-bold mb-12 text-center">Misión y Visión</h2>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="bg-white p-8 rounded-lg shadow-md border-t-4 border-kochepo-red">
+                                <div class="flex items-center mb-6">
+                                    <div class="bg-kochepo-red h-12 w-12 rounded-full flex items-center justify-center mr-4">
+                                        <i class="fas fa-bullseye text-white text-xl"></i>
+                                    </div>
+                                    <h3 class="text-2xl font-semibold">Misión</h3>
+                                </div>
+                                <p class="text-kochepo-gray">Resolver con eficiencia y seguridad las necesidades técnicas de nuestros clientes, ofreciendo soluciones integrales que cumplan con los más altos estándares de calidad y normativas vigentes, garantizando la satisfacción y tranquilidad de quienes confían en nuestros servicios.</p>
+                            </div>
+                            
+                            <div class="bg-white p-8 rounded-lg shadow-md border-t-4 border-kochepo-red">
+                                <div class="flex items-center mb-6">
+                                    <div class="bg-kochepo-red h-12 w-12 rounded-full flex items-center justify-center mr-4">
+                                        <i class="fas fa-eye text-white text-xl"></i>
+                                    </div>
+                                    <h3 class="text-2xl font-semibold">Visión</h3>
+                                </div>
+                                <p class="text-kochepo-gray">Ser reconocidos como un referente en el sector de la construcción y mantenimiento de redes técnicas en Chile, destacando por nuestra innovación, profesionalismo y compromiso con la excelencia, contribuyendo al desarrollo de infraestructuras más seguras y eficientes para la sociedad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Valores Corporativos -->
+            <section class="py-16 bg-white">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-4xl mx-auto">
+                        <h2 class="text-3xl font-bold mb-12 text-center">Valores Corporativos</h2>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="p-6 text-center">
+                                <div class="bg-kochepo-red h-16 w-16 diamond flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-check-circle text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-3">Compromiso</h3>
+                                <p class="text-kochepo-gray">Nos comprometemos a cumplir con los plazos y estándares acordados en cada proyecto.</p>
+                            </div>
+                            
+                            <div class="p-6 text-center">
+                                <div class="bg-kochepo-red h-16 w-16 diamond flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-shield-alt text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-3">Seguridad</h3>
+                                <p class="text-kochepo-gray">Priorizamos la seguridad en todas nuestras operaciones, tanto para nuestro equipo como para nuestros clientes.</p>
+                            </div>
+                            
+                            <div class="p-6 text-center">
+                                <div class="bg-kochepo-red h-16 w-16 diamond flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-lightbulb text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-3">Innovación</h3>
+                                <p class="text-kochepo-gray">Buscamos constantemente nuevas soluciones y tecnologías para mejorar nuestros servicios.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="py-16 bg-kochepo-black text-white">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-4xl mx-auto text-center">
+                        <h2 class="text-3xl font-bold mb-6">Trabajemos juntos en su próximo proyecto</h2>
+                        <p class="text-lg mb-8">Contáctenos hoy mismo para conocer cómo podemos ayudarle con sus necesidades técnicas.</p>
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <a href="#" class="inline-block bg-kochepo-red hover:bg-red-700 text-white font-medium py-3 px-6 rounded-md transition duration-300 shadow-lg" onclick="navigateTo('contacto')">
+                                Contactar ahora
+                            </a>
+                            <a href="#" class="inline-block bg-white hover:bg-gray-100 text-kochepo-black font-medium py-3 px-6 rounded-md transition duration-300 shadow-lg" onclick="navigateTo('servicios')">
+                                Ver nuestros servicios
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Servicios Page -->
+        <div id="servicios" class="page hidden">
+            <!-- Hero Section -->
+            <section class="bg-kochepo-black text-white py-20">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-4xl mx-auto">
+                        <h1 class="text-4xl font-bold mb-6">Nuestros Servicios</h1>
+                        <p class="text-lg">Soluciones técnicas profesionales para todas sus necesidades de instalación y mantenimiento.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Grid -->
+            <section class="py-16 bg-white">
+                <div class="container mx-auto px-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Servicio 1 -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition duration-300">
+                            <div class="h-48 bg-kochepo-black overflow-hidden">
+                                <img src="assets/matricesdeaguapotable.png" alt="Matrices de Agua Potable" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Matrices de Agua Potable</h3>
+                                <p class="text-kochepo-gray mb-4">Instalación y mantenimiento de sistemas de distribución de agua potable para edificios residenciales y comerciales.</p>
+                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="showServiceDetail('agua-potable')">Ver detalles →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Servicio 2 -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition duration-300">
+                            <div class="h-48 bg-kochepo-black overflow-hidden">
+                                <img src="assets/redesdegas.png" alt="Redes de Gas" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Redes de Gas</h3>
+                                <p class="text-kochepo-gray mb-4">Instalación, certificación y mantenimiento de redes de gas natural y licuado, cumpliendo con todas las normativas de seguridad.</p>
+                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="showServiceDetail('gas')">Ver detalles →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Servicio 3 -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition duration-300">
+                            <div class="h-48 bg-kochepo-black overflow-hidden">
+                                <img src="assets/tableroselectricos.png" alt="Tableros Eléctricos" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Tableros Eléctricos</h3>
+                                <p class="text-kochepo-gray mb-4">Diseño, instalación y mantenimiento de tableros eléctricos para todo tipo de edificaciones.</p>
+                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="showServiceDetail('electricos')">Ver detalles →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Servicio 4 -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition duration-300">
+                            <div class="h-48 bg-kochepo-black overflow-hidden">
+                                <img src="assets/redesdeincendioyredhumeda.png" alt="Redes de Incendio y Red Húmeda" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Redes de Incendio y Red Húmeda</h3>
+                                <p class="text-kochepo-gray mb-4">Instalación y mantenimiento de sistemas contra incendios y redes húmedas según normativa vigente.</p>
+                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="showServiceDetail('incendio')">Ver detalles →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Servicio 5 -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition duration-300">
+                            <div class="h-48 bg-kochepo-black overflow-hidden">
+                                <img src="assets/drenesysistemasdecaptacionaguaslluvias.png" alt="Drenes y Captación de Aguas Lluvias" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Drenes y Captación de Aguas Lluvias</h3>
+                                <p class="text-kochepo-gray mb-4">Diseño e instalación de sistemas de captación y evacuación de aguas lluvias.</p>
+                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="showServiceDetail('aguas-lluvias')">Ver detalles →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Servicio 6 -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition duration-300">
+                            <div class="h-48 bg-kochepo-black overflow-hidden">
+                                <img src="assets/instalacionessanitariasyelectricas.png" alt="Instalaciones Sanitarias" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Instalaciones Sanitarias</h3>
+                                <p class="text-kochepo-gray mb-4">Instalación y mantenimiento de redes sanitarias para edificios residenciales y comerciales.</p>
+                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="showServiceDetail('sanitarias')">Ver detalles →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Servicio 7 -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition duration-300">
+                            <div class="h-48 bg-kochepo-black overflow-hidden">
+                                <img src="assets/estructurasdeaceroyhormigon.png" alt="Estructuras de Acero y Hormigón" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Estructuras de Acero y Hormigón</h3>
+                                <p class="text-kochepo-gray mb-4">Construcción de estructuras metálicas y de hormigón para diversos proyectos.</p>
+                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="showServiceDetail('estructuras')">Ver detalles →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Servicio 8 -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition duration-300">
+                            <div class="h-48 bg-kochepo-black overflow-hidden">
+                                <img src="assets/serviciodevideoinspeccionderedes.png" alt="Destape y Videoinspección de Redes" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Destape y Videoinspección de Redes</h3>
+                                <p class="text-kochepo-gray mb-4">Servicio de destape de cañerías y videoinspección para diagnóstico de problemas en redes.</p>
+                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="showServiceDetail('videoinspeccion')">Ver detalles →</a>
+                            </div>
+                        </div>
+
+                        <!-- Servicio 9 - Camarines -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition duration-300">
+                            <div class="h-48 bg-kochepo-black overflow-hidden">
+                                <img src="assets/camarines.png" alt="Camarines" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Camarines</h3>
+                                <p class="text-kochepo-gray mb-4">Construcción y equipamiento de camarines para instalaciones deportivas y gimnasios.</p>
+                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="showServiceDetail('camarines')">Ver detalles →</a>
+                            </div>
+                        </div>
+
+                        <!-- Servicio 10 - Salas de Baño -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition duration-300">
+                            <div class="h-48 bg-kochepo-black overflow-hidden">
+                                <img src="assets/salasdebano.png" alt="Salas de Baño" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Salas de Baño</h3>
+                                <p class="text-kochepo-gray mb-4">Diseño y construcción de salas de baño completas con los más altos estándares de calidad.</p>
+                                <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="showServiceDetail('salas-bano')">Ver detalles →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Service Detail Modal -->
+            <div id="service-detail-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+                <div class="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+                    <div class="p-6 border-b border-gray-200 flex justify-between items-center">
+                        <h3 id="service-detail-title" class="text-2xl font-bold text-kochepo-black">Detalles del Servicio</h3>
+                        <button id="close-service-detail" class="text-kochepo-gray hover:text-kochepo-black">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <div id="service-detail-content" class="prose max-w-none">
+                            <!-- Content will be dynamically inserted here -->
+                        </div>
+                    </div>
+                    <div class="p-6 border-t border-gray-200 bg-gray-50">
+                        <div class="flex justify-end">
+                            <button id="close-service-detail-btn" class="bg-kochepo-red hover:bg-red-700 text-white font-medium py-2 px-4 rounded-md transition duration-300">
+                                Cerrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <section class="py-16 bg-kochepo-black text-white">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-4xl mx-auto text-center">
+                        <h2 class="text-3xl font-bold mb-6">¿Necesita alguno de nuestros servicios?</h2>
+                        <p class="text-lg mb-8">Contáctenos hoy mismo para una evaluación profesional y un presupuesto sin compromiso.</p>
+                        <a href="#" class="inline-block bg-kochepo-red hover:bg-red-700 text-white font-medium py-3 px-8 rounded-md transition duration-300 shadow-lg" onclick="navigateTo('contacto')">
+                            Solicitar presupuesto
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Proyectos Page -->
+        <div id="proyectos" class="page hidden">
+            <!-- Hero Section -->
+            <section class="bg-kochepo-black text-white py-20">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-4xl mx-auto">
+                        <h1 class="text-4xl font-bold mb-6">Nuestros Proyectos</h1>
+                        <p class="text-lg">Conozca algunos de los proyectos que hemos realizado para nuestros clientes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Filter -->
+            <section class="py-8 bg-white border-b">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <button class="project-filter-btn active px-4 py-2 rounded-md bg-kochepo-red text-white" data-filter="all">Todos</button>
+                        <button class="project-filter-btn px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 text-kochepo-black" data-filter="agua">Agua Potable</button>
+                        <button class="project-filter-btn px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 text-kochepo-black" data-filter="gas">Gas</button>
+                        <button class="project-filter-btn px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 text-kochepo-black" data-filter="electrico">Eléctrico</button>
+                        <button class="project-filter-btn px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 text-kochepo-black" data-filter="sanitario">Sanitario</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Grid -->
+            <section class="py-16 bg-kochepo-light-gray">
+                <div class="container mx-auto px-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                        <!-- Project 1 -->
+                        <div class="project-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300" data-category="agua">
+                            <div class="h-64 bg-kochepo-black relative">
+                                <svg class="w-full h-full" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="300" fill="#1a1a1a"></rect>
+                                    <circle cx="200" cy="150" r="80" fill="#c8102e" fill-opacity="0.6"></circle>
+                                    <path d="M120 120 L280 120 L280 180 L120 180 Z" fill="#ffffff" fill-opacity="0.2"></path>
+                                </svg>
+                                <div class="absolute top-4 right-4 bg-kochepo-red text-white text-xs font-bold px-2 py-1 rounded">Agua Potable</div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">Edificio Residencial Los Álamos</h3>
+                                <p class="text-kochepo-gray mb-4">Instalación completa de matriz de agua potable para edificio de 20 departamentos.</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-kochepo-gray"><i class="fas fa-map-marker-alt mr-1"></i> Santiago Centro</span>
+                                    <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="showProjectDetail(1)">Ver proyecto →</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project 2 -->
+                        <div class="project-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300" data-category="gas">
+                            <div class="h-64 bg-kochepo-black relative">
+                                <svg class="w-full h-full" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="300" fill="#1a1a1a"></rect>
+                                    <rect x="100" y="100" width="200" height="100" fill="#c8102e" fill-opacity="0.6"></rect>
+                                    <circle cx="200" cy="150" r="40" fill="#ffffff" fill-opacity="0.2"></circle>
+                                </svg>
+                                <div class="absolute top-4 right-4 bg-kochepo-red text-white text-xs font-bold px-2 py-1 rounded">Gas</div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">Centro Comercial Plaza Norte</h3>
+                                <p class="text-kochepo-gray mb-4">Instalación y certificación de red de gas para 12 locales comerciales.</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-kochepo-gray"><i class="fas fa-map-marker-alt mr-1"></i> Huechuraba</span>
+                                    <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="showProjectDetail(2)">Ver proyecto →</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project 3 -->
+                        <div class="project-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300" data-category="electrico">
+                            <div class="h-64 bg-kochepo-black relative">
+                                <svg class="w-full h-full" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="300" fill="#1a1a1a"></rect>
+                                    <polygon points="200,50 300,150 200,250 100,150" fill="#c8102e" fill-opacity="0.6"></polygon>
+                                    <line x1="100" y1="150" x2="300" y2="150" stroke="#ffffff" stroke-width="5" stroke-opacity="0.2"></line>
+                                </svg>
+                                <div class="absolute top-4 right-4 bg-kochepo-red text-white text-xs font-bold px-2 py-1 rounded">Eléctrico</div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">Oficinas Corporativas Tecnova</h3>
+                                <p class="text-kochepo-gray mb-4">Instalación de tableros eléctricos y sistema de distribución para edificio de oficinas.</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-kochepo-gray"><i class="fas fa-map-marker-alt mr-1"></i> Las Condes</span>
+                                    <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="showProjectDetail(3)">Ver proyecto →</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project 4 -->
+                        <div class="project-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300" data-category="sanitario">
+                            <div class="h-64 bg-kochepo-black relative">
+                                <svg class="w-full h-full" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="300" fill="#1a1a1a"></rect>
+                                    <rect x="50" y="100" width="300" height="100" fill="#c8102e" fill-opacity="0.6"></rect>
+                                    <circle cx="200" cy="150" r="30" fill="#ffffff" fill-opacity="0.2"></circle>
+                                    <circle cx="120" cy="150" r="20" fill="#ffffff" fill-opacity="0.2"></circle>
+                                    <circle cx="280" cy="150" r="20" fill="#ffffff" fill-opacity="0.2"></circle>
+                                </svg>
+                                <div class="absolute top-4 right-4 bg-kochepo-red text-white text-xs font-bold px-2 py-1 rounded">Sanitario</div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">Hospital Clínico Regional</h3>
+                                <p class="text-kochepo-gray mb-4">Renovación completa de instalaciones sanitarias en ala norte del hospital.</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-kochepo-gray"><i class="fas fa-map-marker-alt mr-1"></i> Concepción</span>
+                                    <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="showProjectDetail(4)">Ver proyecto →</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project 5 -->
+                        <div class="project-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300" data-category="agua">
+                            <div class="h-64 bg-kochepo-black relative">
+                                <svg class="w-full h-full" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="300" fill="#1a1a1a"></rect>
+                                    <path d="M50,150 Q200,50 350,150 Q200,250 50,150 Z" fill="#c8102e" fill-opacity="0.6"></path>
+                                    <line x1="50" y1="150" x2="350" y2="150" stroke="#ffffff" stroke-width="5" stroke-opacity="0.2"></line>
+                                </svg>
+                                <div class="absolute top-4 right-4 bg-kochepo-red text-white text-xs font-bold px-2 py-1 rounded">Agua Potable</div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">Condominio Vista Mar</h3>
+                                <p class="text-kochepo-gray mb-4">Instalación de red de agua potable para condominio de 15 casas.</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-kochepo-gray"><i class="fas fa-map-marker-alt mr-1"></i> Viña del Mar</span>
+                                    <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="showProjectDetail(5)">Ver proyecto →</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project 6 -->
+                        <div class="project-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300" data-category="gas">
+                            <div class="h-64 bg-kochepo-black relative">
+                                <svg class="w-full h-full" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="300" fill="#1a1a1a"></rect>
+                                    <rect x="75" y="75" width="250" height="150" fill="#c8102e" fill-opacity="0.6"></rect>
+                                    <path d="M75,225 L325,75" stroke="#ffffff" stroke-width="5" stroke-opacity="0.2"></path>
+                                    <path d="M75,75 L325,225" stroke="#ffffff" stroke-width="5" stroke-opacity="0.2"></path>
+                                </svg>
+                                <div class="absolute top-4 right-4 bg-kochepo-red text-white text-xs font-bold px-2 py-1 rounded">Gas</div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">Restaurante El Mirador</h3>
+                                <p class="text-kochepo-gray mb-4">Instalación y certificación de red de gas para cocina industrial.</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-kochepo-gray"><i class="fas fa-map-marker-alt mr-1"></i> Valparaíso</span>
+                                    <a href="#" class="text-kochepo-red font-medium hover:underline" onclick="showProjectDetail(6)">Ver proyecto →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project Detail Modal -->
+            <div id="project-detail-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+                <div class="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+                    <div class="p-6 border-b border-gray-200 flex justify-between items-center">
+                        <h3 id="project-detail-title" class="text-2xl font-bold text-kochepo-black">Detalles del Proyecto</h3>
+                        <button id="close-project-detail" class="text-kochepo-gray hover:text-kochepo-black">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <div id="project-detail-content" class="prose max-w-none">
+                            <!-- Content will be dynamically inserted here -->
+                        </div>
+                    </div>
+                    <div class="p-6 border-t border-gray-200 bg-gray-50">
+                        <div class="flex justify-end">
+                            <button id="close-project-detail-btn" class="bg-kochepo-red hover:bg-red-700 text-white font-medium py-2 px-4 rounded-md transition duration-300">
+                                Cerrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <section class="py-16 bg-kochepo-black text-white">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-4xl mx-auto text-center">
+                        <h2 class="text-3xl font-bold mb-6">¿Listo para comenzar su proyecto?</h2>
+                        <p class="text-lg mb-8">Contáctenos hoy mismo para una evaluación profesional y un presupuesto sin compromiso.</p>
+                        <a href="#" class="inline-block bg-kochepo-red hover:bg-red-700 text-white font-medium py-3 px-8 rounded-md transition duration-300 shadow-lg" onclick="navigateTo('contacto')">
+                            Solicitar presupuesto
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contacto Page -->
+        <div id="contacto" class="page hidden">
+            <!-- Hero Section -->
+            <section class="bg-kochepo-black text-white py-20">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-4xl mx-auto">
+                        <h1 class="text-4xl font-bold mb-6">Contacto</h1>
+                        <p class="text-lg">Estamos listos para ayudarle con su próximo proyecto. Contáctenos hoy mismo.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Info and Form -->
+            <section class="py-16 bg-white">
+                <div class="container mx-auto px-4">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <!-- Contact Information -->
+                        <div>
+                            <h2 class="text-2xl font-bold mb-6">Información de Contacto</h2>
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="bg-kochepo-red h-10 w-10 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                        <i class="fas fa-map-marker-alt text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-lg mb-1">Dirección</h3>
+                                        <p class="text-kochepo-gray">Av. Providencia 1234, Oficina 567<br>Providencia, Santiago, Chile</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-kochepo-red h-10 w-10 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                        <i class="fas fa-phone text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-lg mb-1">Teléfono</h3>
+                                        <p class="text-kochepo-gray">+56 2 2123 4567<br>+56 9 8765 4321</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-kochepo-red h-10 w-10 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                        <i class="fas fa-envelope text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-lg mb-1">Correo Electrónico</h3>
+                                        <p class="text-kochepo-gray">contacto@kochepo.cl<br>ventas@kochepo.cl</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-kochepo-red h-10 w-10 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                        <i class="fas fa-clock text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-lg mb-1">Horario de Atención</h3>
+                                        <p class="text-kochepo-gray">Lunes a Viernes: 9:00 - 18:00<br>Sábado: 9:00 - 13:00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-10">
+                                <h3 class="text-xl font-semibold mb-4">Síguenos en Redes Sociales</h3>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="bg-kochepo-black hover:bg-kochepo-red h-10 w-10 rounded-full flex items-center justify-center transition duration-300">
+                                        <i class="fab fa-facebook-f text-white"></i>
+                                    </a>
+                                    <a href="#" class="bg-kochepo-black hover:bg-kochepo-red h-10 w-10 rounded-full flex items-center justify-center transition duration-300">
+                                        <i class="fab fa-instagram text-white"></i>
+                                    </a>
+                                    <a href="#" class="bg-kochepo-black hover:bg-kochepo-red h-10 w-10 rounded-full flex items-center justify-center transition duration-300">
+                                        <i class="fab fa-linkedin-in text-white"></i>
+                                    </a>
+                                    <a href="#" class="bg-kochepo-black hover:bg-kochepo-red h-10 w-10 rounded-full flex items-center justify-center transition duration-300">
+                                        <i class="fab fa-twitter text-white"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Contact Form -->
+                        <div>
+                            <h2 class="text-2xl font-bold mb-6">Envíenos un Mensaje</h2>
+                            <form id="contact-form" class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="name" class="block text-sm font-medium text-kochepo-gray mb-1">Nombre *</label>
+                                        <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kochepo-red" required="">
+                                    </div>
+                                    <div>
+                                        <label for="email" class="block text-sm font-medium text-kochepo-gray mb-1">Correo Electrónico *</label>
+                                        <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kochepo-red" required="">
+                                    </div>
+                                </div>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="phone" class="block text-sm font-medium text-kochepo-gray mb-1">Teléfono</label>
+                                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kochepo-red">
+                                    </div>
+                                    <div>
+                                        <label for="subject" class="block text-sm font-medium text-kochepo-gray mb-1">Asunto *</label>
+                                        <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kochepo-red" required="">
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-kochepo-gray mb-1">Mensaje *</label>
+                                    <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kochepo-red" required=""></textarea>
+                                </div>
+                                
+                                <div>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="h-4 w-4 text-kochepo-red focus:ring-kochepo-red border-gray-300 rounded" required="">
+                                        <span class="ml-2 text-sm text-kochepo-gray">Acepto la política de privacidad y el tratamiento de mis datos personales.</span>
+                                    </label>
+                                </div>
+                                
+                                <div>
+                                    <button type="submit" class="bg-kochepo-red hover:bg-red-700 text-white font-medium py-3 px-6 rounded-md transition duration-300 shadow-lg w-full md:w-auto">
+                                        Enviar Mensaje
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Visit Request Section -->
+            <section class="py-16 bg-kochepo-light-gray">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-4xl mx-auto">
+                        <h2 class="text-3xl font-bold mb-8 text-center">Agende una Visita Técnica</h2>
+                        <div class="bg-white p-8 rounded-lg shadow-md">
+                            <form id="visit-form" class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="visit-name" class="block text-sm font-medium text-kochepo-gray mb-1">Nombre *</label>
+                                        <input type="text" id="visit-name" name="visit-name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kochepo-red" required="">
+                                    </div>
+                                    <div>
+                                        <label for="visit-email" class="block text-sm font-medium text-kochepo-gray mb-1">Correo Electrónico *</label>
+                                        <input type="email" id="visit-email" name="visit-email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kochepo-red" required="">
+                                    </div>
+                                </div>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="visit-phone" class="block text-sm font-medium text-kochepo-gray mb-1">Teléfono *</label>
+                                        <input type="tel" id="visit-phone" name="visit-phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kochepo-red" required="">
+                                    </div>
+                                    <div>
+                                        <label for="visit-date" class="block text-sm font-medium text-kochepo-gray mb-1">Fecha Preferida *</label>
+                                        <input type="date" id="visit-date" name="visit-date" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kochepo-red" required="">
+                                    </div>
+                                </div>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="visit-time" class="block text-sm font-medium text-kochepo-gray mb-1">Hora Preferida *</label>
+                                        <select id="visit-time" name="visit-time" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kochepo-red" required="">
+                                            <option value="">Seleccione una hora</option>
+                                            <option value="morning">Mañana (9:00 - 12:00)</option>
+                                            <option value="afternoon">Tarde (14:00 - 17:00)</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="visit-service" class="block text-sm font-medium text-kochepo-gray mb-1">Servicio Requerido *</label>
+                                        <select id="visit-service" name="visit-service" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kochepo-red" required="">
+                                            <option value="">Seleccione un servicio</option>
+                                            <option value="agua">Matrices de Agua Potable</option>
+                                            <option value="gas">Redes de Gas</option>
+                                            <option value="electrico">Tableros Eléctricos</option>
+                                            <option value="incendio">Redes de Incendio</option>
+                                            <option value="aguas-lluvias">Drenes y Aguas Lluvias</option>
+                                            <option value="sanitario">Instalaciones Sanitarias</option>
+                                            <option value="estructuras">Estructuras</option>
+                                            <option value="videoinspeccion">Destape y Videoinspección</option>
+                                            <option value="otro">Otro</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label for="visit-address" class="block text-sm font-medium text-kochepo-gray mb-1">Dirección de la Visita *</label>
+                                    <input type="text" id="visit-address" name="visit-address" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kochepo-red" required="">
+                                </div>
+                                
+                                <div>
+                                    <label for="visit-details" class="block text-sm font-medium text-kochepo-gray mb-1">Detalles Adicionales</label>
+                                    <textarea id="visit-details" name="visit-details" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kochepo-red"></textarea>
+                                </div>
+                                
+                                <div>
+                                    <button type="submit" class="bg-kochepo-red hover:bg-red-700 text-white font-medium py-3 px-6 rounded-md transition duration-300 shadow-lg w-full">
+                                        Solicitar Visita Técnica
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Map Section (Placeholder) -->
+            <section class="h-96 bg-kochepo-black relative">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <svg class="w-full h-full" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="1200" height="400" fill="#1a1a1a"></rect>
+                        <path d="M0,200 L1200,200" stroke="#c8102e" stroke-width="4" stroke-opacity="0.6"></path>
+                        <path d="M600,0 L600,400" stroke="#c8102e" stroke-width="4" stroke-opacity="0.6"></path>
+                        <circle cx="600" cy="200" r="50" fill="#c8102e" fill-opacity="0.8"></circle>
+                        <circle cx="600" cy="200" r="10" fill="#ffffff"></circle>
+                        <text x="620" y="180" fill="#ffffff" font-family="Arial" font-size="14">Kochepo Construcciones Spa</text>
+                        <text x="620" y="200" fill="#ffffff" font-family="Arial" font-size="12">Av. Providencia 1234, Oficina 567</text>
+                        <text x="620" y="220" fill="#ffffff" font-family="Arial" font-size="12">Providencia, Santiago, Chile</text>
+                    </svg>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Script para inicializar el carrusel de servicios -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initServiceCarousel();
+            
+            // Asegurar que el carrusel se actualice después de cargar todas las imágenes
+            window.addEventListener('load', function() {
+                if (typeof initServiceCarousel === 'function') {
+                    initServiceCarousel();
+                }
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-kochepo-black text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <img src="assets/logo-web-kochepo (1).png" alt="Kochepo Logo" class="h-12">
+                    </div>
+                    <p class="text-gray-400 mb-4">Especialistas en instalación, mantenimiento y certificación de redes técnicas.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Enlaces Rápidos</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition" onclick="navigateTo('inicio')">Inicio</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition" onclick="navigateTo('quienes-somos')">Quiénes Somos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition" onclick="navigateTo('servicios')">Servicios</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition" onclick="navigateTo('proyectos')">Proyectos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition" onclick="navigateTo('contacto')">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Servicios</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition" onclick="showServiceDetail('agua-potable')">Matrices de Agua Potable</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition" onclick="showServiceDetail('gas')">Redes de Gas</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition" onclick="showServiceDetail('electricos')">Tableros Eléctricos</a></li>
